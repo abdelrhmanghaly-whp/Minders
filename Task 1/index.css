@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.arrows {
+    position: relative;
+    top: 300px;
+    left: 200px;
+}
+
+.next {
+    position: inherit;
+    bottom: 32px;
+    left: 10px;
+}
+
+.prev {
+    position: inherit;
+    top: -10px;
+    right: 60px;
+}
+
+
+
+.pics {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.p {
+    position: relative;
+    left: 620px;
+    top: 10px;
+}
+
+.in {
+    font-size: 32px;
+    font-weight: lighter;
+    position: relative;
+    right: 1280px;
+}
+
+.bottomimg {
+    position: absolute;
+    bottom: 0;
+}
+
+.bottomimg .inside {
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.quote {
+    position: relative;
+    left: 320px;
+    bottom: 540px;
+
+}
+
+.all {
+    position: relative;
+    top: 130px;
+    left: 236px;
+    font-size: 23px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.major {
+    color: grey;
+    position: relative;
+    left: 165px;
+    bottom: 26px;
+}
+
+.whole {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.cubes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes effect {
+    100% {
+        transform: translateY(2500px) rotate(720deg);
+    }
+}
+
+.cubes div {
+    position: absolute;
+    display: block;
+    background: hsl(240, 60%, 61%);
+    top: -150px;
+    animation: effect 15s linear infinite;
+}
+
+.cubes .first {
+    right: 10%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 2s;
+}
+
+.cubes .second {
+    right: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 1s;
+}
+
+.cubes .third {
+    right: 25%;
+    width: 95px;
+    height: 95px;
+    animation-delay: 2.5s;
+}
+
+.cubes .fourth {
+    left: 35%;
+    width: 35px;
+    height: 35px;
+    animation-delay: 3.5s;
+}
+
+.cubes .fifth {
+    left: 20%;
+    width: 55px;
+    height: 55px;
+    animation-delay: 5s;
+}
+
+.cubes .sixth {
+    left: 10%;
+    width: 35px;
+    height: 35px;
+    animation-delay: 7s;
+}
