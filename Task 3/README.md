@@ -1,3 +1,4 @@
-* Task 3
+**Task 3.
+
 Tip calculator app, pixel perfect
 
