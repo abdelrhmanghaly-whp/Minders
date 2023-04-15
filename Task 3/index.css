@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swa");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-size: 15px;
+    background-color: var(--lightGrayishCyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.whole {
+    background-color: var(--White);
+    border-radius: 20px;
+    max-width: 750px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.whole #left-grid p,
+label {
+    color: gray;
+    font-size: 13px;
+}
+
+.whole #left-grid,
+.whole #right-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.whole #left-grid {
+    gap: 2rem;
+}
+
+
+.whole #left-grid input {
+    margin-top: 0.3rem;
+    text-align: end;
+    border: transparent;
+    background: var(--veryLIghtGrayishCyan);
+    padding: 0.5rem 0.4rem;
+    font-size: 18px;
+}
+
+
+#bill,
+#number-people {
+    display: flex;
+    position: relative;
+}
+
+#bill input,
+#number-people input {
+    /* expands of flex attr*/
+    flex: 1;
+    color: var(--veryDarkCyan);
+}
+
+#bill img,
+#number-people img {
+    width: 10px;
+    height: 12px;
+    position: absolute;
+    top: 20px;
+    left: 1rem;
+}
+
+/*erg3 tany hna feha error*/
+.whole #middle-left-grid .applied-tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+.whole #middle-left-grid p {
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    background-color: var(--veryDarkCyan);
+    color: var(--White);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+
+.button:hover {
+    background-color: var(--StrongCyan);
+    color: var(--veryDarkCyan);
+}
+
+.button.active {
+    background-color: var(--StrongCyan);
+    color: var(--veryDarkCyan);
+}
+
+
+.whole #middle-left-grid input {
+    width: 100%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.whole #left-grid #bottom-left-grid p {
+    font-size: 13px;
+}
+
+.whole #left-grid #bottom-left-grid #people {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* erg3 tany hna*/
+.whole #right-grid {
+    gap: 3rem;
+    padding: 2rem;
+    background-color: var(--veryDarkCyan);
+    border-radius: 10px;
+}
+
+.whole #upper-right-grid,
+.whole #middle-right-grid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tip-person {
+    font-size: 13px;
+    color: var(--White);
+}
+
+.person {
+    color: var(--White);
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.tip-total {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 30px;
+    color: var(--StrongCyan);
+}
+
+
+
+#right-grid #button-reset {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 2rem;
+    font-weight: bolder;
+}
+
+
+.has-reset-activated {
+    background-color: var(--StrongCyan);
+    color: var(--veryDarkCyan);
+}
+
+.whole input,
+button {
+    cursor: pointer;
+}
+
+.whole button {
+    padding: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* remove input f arrows bel nsba l kol el browsers m3ada firefox leha haga tanya*/
+    -webkit-appearance: none;
+    margin: 0px;
+}
+
+@media all and (max-width:800px) {
+    .whole {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media all and (max-width:400px) {
+
+    #left-grid,
+    #right-grid {
+        width: 100%;
+    }
+
+    .whole #middle-left-grid .applied-tips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .whole #middle-left-grid input,
+    .button {
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+@media all and (min-width: 400px) {
+    .whole #left-grid input:focus {
+        outline: none;
+    }
+}
+
+.whole #left-grid input:focus {
+    border: 2px solid var(--StrongCyan);
+}
+
+
+@media all and (max-width:300px) {
+
+    .whole #middle-left-grid input,
+    .button {
+        width: 100%;
+    }
+}
+
+:root {
+    --StrongCyan: hsl(172, 67%, 45%);
+    /* primary */
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLIghtGrayishCyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+    --fontSize: 24px;
+}

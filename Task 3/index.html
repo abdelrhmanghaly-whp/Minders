@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width, intial-scale=1.0">
+    <title>Tip Calculator app</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<!--
+grid systems
+left-middle-top-right
+flex f flex 3shan form baseta
+root 3shan mst5dmtosh wla mra w tel3 effective bgd
+respo
+azay a-get more information mn task da? define more ds ,helper functions, dom tricks
+id's 3shan el dom calls w rage3 3la el query selectors/getelements tany
+error display "cant be zero"
+bottom fe le3b kter w 7afrka
+cursor pointers msh bta5od balk mnha 5od balk el input f / wel % picks buttons 3leha pointer cursor 
+abl mt3ok fel positions 5osh rage3ha tany
+hn-abuse el for each wla eh?
+azay a5ly el % tt7sb ? 
+rkz fel sora feha fixed precision(2), shof fe setprecision aw function tanya wla l2
+
+-->
+
+<body>
+    <div class="logo">
+        <img src="logo.svg">
+    </div>
+    <div class="whole">
+        <div id="left-grid">
+            <div id="upper-left-grid">
+                <label>Bill</label>
+                <div id="bill">
+                    <img src="icon-dollar.svg" class="inside-logos">
+                    <input class="input" type="number" placeholder="0">
+                </div>
+            </div>
+
+            <div id="middle-left-grid">
+                <p>Select Tip %</p>
+                <div class="applied-tips">
+                    <!--calling up values in js-->
+                    <button class="button" value="5">5%</button>
+                    <button class="button" value="10">10%</button>
+                    <button class="button" value="15">15%</button>
+                    <button class="button" value="25">25%</button>
+                    <button class="button" value="50">50%</button>
+                    <input class="custom" type="number" placeholder="Custom">
+                </div>
+            </div>
+            <div id="bottom-left-grid">
+                <div id="people">
+                    <p>Number of People</p>
+                    <p class="Cant-be-zero"></p> <!-- display error-->
+                </div>
+                <div id="number-people">
+                    <img src="icon-person.svg" class="inside-logos">
+                    <input class="input" type="number" placeholder="0">
+                </div>
+            </div>
+        </div>
+
+        <div id="right-grid">
+            <div id="upper-right-grid">
+                <div>
+                    <p class="tip-person">Tip Amount</p>
+                    <p class="person">/ person</p>
+                </div>
+                <div class="tip-total">
+                    <div class="dollar"></div>
+                    <span>$</span><span id="result-tip">0.00</span>
+                </div>
+            </div>
+            <div id="middle-right-grid">
+                <div>
+                    <p class="tip-person">Total</p>
+                    <p class="person">/ person</p>
+                </div>
+                <div class="tip-total">
+                    <div class="dollar"></div>
+                    <span>$</span><span class="total-result">0.00</span>
+                </div>
+            </div>
+            <button id="button-reset" disabled>RESET</button> <!-- disabled by default -->
+        </div>
+    </div class="whole">
+    <script src="index.js"></script>
+</body>
+
+</html>
