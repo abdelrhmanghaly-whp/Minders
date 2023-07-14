@@ -1,0 +1,588 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    color: hsl(273, 4%, 51%);
+    font-size: 1rem;
+    font-family: "Karla", sans-serif;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: hsl(270, 9%, 17%);
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+}
+
+p {
+    line-height: 2;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav .logo {
+    display: flex;
+    margin: 1.5rem;
+}
+
+#hamburger {
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.active #hamburger {
+    display: none;
+}
+
+#close {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+
+.active #close {
+    display: flex;
+}
+
+.nav_ul {
+    height: 0px;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 0;
+}
+
+.nav_ul::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/bg-pattern-footer-mobile.svg) no-repeat, hsl(270, 9%, 17%);
+    background-size: contain;
+    /* rev img fel responsive*/
+    transform: rotate(180deg);
+    z-index: -1;
+}
+
+.active .nav_ul {
+    height: 90vh;
+    padding: 2rem 1rem;
+}
+
+.nav-links {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.nav-links:active {
+    border: 0.1rem solid hsl(0, 0%, 98%);
+}
+
+.nav-links a {
+    color: hsl(0, 0%, 98%);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: hsl(270, 9%, 17%);
+}
+
+.view_plans:hover {
+    background: hsl(270, 9%, 17%);
+}
+
+.view_plans:hover a {
+    color: hsl(0, 0%, 98%);
+}
+
+
+header {
+    color: hsl(0, 0%, 98%);
+    background: hsl(256, 26%, 20%);
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+header picture img {
+    width: 100%;
+}
+
+.header-text {
+    width: 100%;
+    padding: 5rem 1.6rem;
+    position: relative;
+    z-index: 0;
+}
+
+.header-text::before {
+    position: absolute;
+    content: url(./images/bg-pattern-intro-left-mobile.svg);
+    top: 0;
+    left: 0;
+    width: 168px;
+    height: 165px;
+    z-index: -1;
+}
+
+.header-text::after {
+    position: absolute;
+    content: url(./images/bg-pattern-intro-right-mobile.svg);
+    right: 0;
+    bottom: -186px;
+    width: 124px;
+    height: 330px;
+    z-index: 1;
+}
+
+.header-text h1 {
+    color: hsl(0, 0%, 98%);
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+.header-text p {
+    margin: 1rem 0 2rem 0;
+}
+
+.header-text button {
+    color: hsl(0, 0%, 98%);
+    background: transparent;
+    border: 0.1rem solid hsl(0, 0%, 98%);
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.header-text button:hover {
+    color: hsl(256, 26%, 20%);
+    background: hsl(0, 0%, 98%);
+}
+
+
+.mid_content {
+    width: 100%;
+    padding: 1.6rem;
+    margin-top: 10rem;
+}
+
+.mid_content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.mid_content h1::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: -2rem;
+    width: 100px;
+    height: 0.1px;
+    background: hsl(270, 9%, 17%);
+}
+
+.mid_content .features_section img {
+    margin: 2rem 0;
+}
+
+#features {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#features .features_section {
+    max-width: 350px;
+}
+
+.features_section p {
+    margin: 1rem 0;
+}
+
+.features_section h2 {
+    font-size: 1.65rem;
+}
+
+.mid_content #how_we_work {
+    background: hsl(256, 26%, 20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 10rem 0;
+    padding: 5rem 2rem;
+    position: relative;
+    z-index: 0;
+}
+
+.mid_content #how_we_work::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 175px;
+    height: 370px;
+    background: url(./images/bg-pattern-how-we-work-mobile.svg) no-repeat;
+    z-index: -1;
+}
+
+#how_we_work h2 {
+    color: hsl(0, 0%, 98%);
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+#how_we_work button {
+    color: hsl(0, 0%, 98%);
+    background: transparent;
+    border: 0.1rem solid hsl(0, 0%, 98%);
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+}
+
+#how_we_work button:hover {
+    color: hsl(256, 26%, 20%);
+    background: hsl(0, 0%, 98%);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+#footer {
+    background: hsl(0, 0%, 98%);
+    padding: 5rem 1.6rem 0rem 1.6rem;
+    position: relative;
+    z-index: 0;
+}
+
+#footer::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 175px;
+    background: url(./images/bg-pattern-footer-mobile.svg) no-repeat;
+    z-index: -1;
+}
+
+#footer .footer_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer_top ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+/* bdl mt3dl fel svg nfso use brightness --> bt7km fe nsbt el lon mn abyad laswd 0% black up to 100%*/
+.footer_top ul li a img:hover {
+    filter: brightness(0%);
+}
+
+#footer hr {
+    width: 100%;
+    height: 0.1px;
+    background-color: hsl(273, 4%, 51%);
+    display: block;
+    margin-top: 2rem;
+    border: 0;
+    clear: both;
+}
+
+.links {
+    font-weight: 700;
+}
+
+.links p {
+    margin: 2rem 0;
+}
+
+.links ul {
+    color: hsl(256, 26%, 20%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+}
+
+.links ul li a {
+    color: hsl(270, 9%, 17%);
+    text-decoration: none;
+    position: relative;
+}
+
+.links ul li a::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: hsl(256, 26%, 20%);
+    opacity: 0;
+}
+
+.links ul li a:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+.footer_bottom {
+    margin-top: 5rem;
+}
+
+@media (min-width: 770px) {
+    body {
+        text-align: left;
+    }
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 3rem;
+    }
+
+    #hamburger,
+    #close {
+        display: none;
+    }
+
+    .nav_ul {
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav_ul::before {
+        display: none;
+    }
+
+    .nav-links {
+        width: max-content;
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links a {
+        color: hsl(273, 4%, 51%);
+        font-size: 1rem;
+    }
+
+    .nav_ul .view_plans {
+        border: 0.1rem solid hsl(270, 9%, 17%);
+    }
+
+    .view_plans a {
+        color: hsl(270, 9%, 17%);
+    }
+
+    header {
+        position: relative;
+        z-index: 0;
+        padding: 5rem;
+    }
+
+    header::before {
+        position: absolute;
+        content: "";
+        bottom: -10rem;
+        left: 0;
+        width: 195px;
+        height: 505px;
+        background: url(./images/bg-pattern-intro-left-desktop.svg) no-repeat;
+        z-index: -1;
+    }
+
+    header::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        width: 435px;
+        height: 595px;
+        background: url(./images/bg-pattern-intro-right-desktop.svg) no-repeat;
+        z-index: 2;
+    }
+
+    header picture img {
+        position: absolute;
+        top: 7rem;
+        right: 3rem;
+        max-width: 300px;
+        height: 400px;
+        z-index: 1;
+    }
+
+    .header-text {
+        padding: 0;
+    }
+
+    .header-text::before,
+    .header-text::after {
+        display: none;
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem;
+        max-width: 320px;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+
+    .header-text h1::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: -2rem;
+        width: 150px;
+        height: 0.1rem;
+        background: hsl(0, 0%, 98%);
+    }
+
+    .header-text p {
+        max-width: 320px;
+    }
+
+    .mid_content {
+        padding: 5rem;
+    }
+
+    .mid_content h1 {
+        text-align: left;
+    }
+
+    .mid_content h1:after {
+        right: unset;
+    }
+
+    #features {
+        justify-content: space-between;
+    }
+
+    .mid_content #how_we_work {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mid_content #how_we_work::before {
+        width: 435px;
+        height: 100%;
+        background: url(./images/bg-pattern-how-we-work-desktop.svg) no-repeat;
+    }
+
+    #how_we_work h2 {
+        max-width: 350px;
+    }
+
+    #footer::before {
+        width: 530px;
+        height: 25px;
+        background: url(./images/bg-pattern-footer-desktop.svg) no-repeat;
+    }
+
+    #footer {
+        padding: 5rem;
+        padding-bottom: 0;
+    }
+
+    #footer .footer_top {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer_middle {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 280px));
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1200px) {
+    nav {
+        padding: 1.5rem 10rem;
+    }
+
+    header {
+        padding: 10rem;
+    }
+
+    header picture img {
+        max-width: 430px;
+        height: 550px;
+        top: 10rem;
+        right: 10rem;
+    }
+
+    .header-text {
+        padding-top: 5rem;
+    }
+
+    .header-text h1 {
+        max-width: 450px;
+        font-size: 3.75rem;
+    }
+
+    .header-text h1::after {
+        top: -5rem;
+    }
+
+    .header-text p {
+        max-width: 430px;
+    }
+
+    .mid_content {
+        padding: 5rem 10rem;
+    }
+
+    #footer {
+        padding: 5rem 10rem 0 10rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    header picture img {
+        max-width: 540px;
+        height: 100%;
+    }
+
+    .header-text p {
+        max-width: 550px;
+    }
+}
